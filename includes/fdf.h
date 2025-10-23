@@ -13,7 +13,9 @@
 #ifndef FDF_H
 #define FDF_H
 
-#include <mlx.h>
+#include "../minilibx-linux/mlx.h"
+#include "../gnl/get_next_line.h"
+#include <stdlib.h>
 
 typedef struct s_data
 {
@@ -21,4 +23,5 @@ typedef struct s_data
     void *win;
 }   t_data;
 
+int	close_window(void *param);
 #endif

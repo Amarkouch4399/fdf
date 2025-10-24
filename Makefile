@@ -6,12 +6,13 @@
 #    By: ouamarko <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/26 20:02:57 by ouamarko          #+#    #+#              #
-#    Updated: 2025/10/19 15:16:52 by ouamarko         ###   ########.fr        #
+#    Updated: 2025/10/24 19:12:42 by ouamarko         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME	= fdf
 
 SRC	= fdf.c \
+	  utils/ft_split.c \
 	  $(GNL_DIR)/get_next_line.c \
 	  $(GNL_DIR)/get_next_line_utils.c \
 
@@ -28,8 +29,12 @@ INC_DIR = ./includes
 
 all: ${NAME}
 
+${MLX_PATH}/libmlx.a:
+	@make -C ${MLX_PATH}
+
 ${NAME}: ${OBJS}
 	${CC} ${CFLAGS} ${OBJS} $(MLX_FLAGS) -o ${NAME}
+	${MLX_PATH}/libmlx.a
 	@echo "Compil done ✅"
 
 %.o: %.c

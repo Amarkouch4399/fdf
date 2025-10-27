@@ -6,13 +6,15 @@
 #    By: ouamarko <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/26 20:02:57 by ouamarko          #+#    #+#              #
-#    Updated: 2025/10/24 19:12:42 by ouamarko         ###   ########.fr        #
+#    Updated: 2025/10/27 14:22:13 by ouamarko         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME	= fdf
 
 SRC	= fdf.c \
 	  utils/ft_split.c \
+	  utils/ft_lenght.c \
+	  utils/ft_atoi.c \
 	  $(GNL_DIR)/get_next_line.c \
 	  $(GNL_DIR)/get_next_line_utils.c \
 
